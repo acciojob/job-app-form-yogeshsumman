@@ -7,39 +7,51 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form method="POST">
+    <form method="POST" action="">
+        <!-- Name -->
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
 
+        <!-- Email -->
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
 
-        <label>Gender:</label>
-        <input type="radio" id="male" name="gender" value="male" required>
-        <label for="male">Male</label>
-        <input type="radio" id="female" name="gender" value="female" required>
-        <label for="female">Female</label>
+        <!-- Gender -->
+        <div>
+            <span>Gender:</span><br> <!-- Using span instead of label since it’s a group -->
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </div>
 
+        <!-- Laptop Brands -->
         <label for="laptop">Laptop Brands:</label>
-        <select id="laptop" name="laptop" required>
+        <select id="laptop" name="laptop">
+            <option value="">Select a brand</option> <!-- Added default empty option -->
             <option value="apple">Apple</option>
             <option value="asus">Asus</option>
             <option value="hp">HP</option>
         </select>
 
+        <!-- Age -->
         <label for="age">Age:</label>
-        <input type="number" id="age" name="age" min="18" max="99" required>
+        <input type="number" id="age" name="age" required>
 
+        <!-- Date of Birth -->
         <label for="dob">Date of Birth:</label>
         <input type="date" id="dob" name="dob" required>
 
+        <!-- Password -->
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required>
 
+        <!-- Portfolio URL -->
         <label for="portfolio">Portfolio URL:</label>
-        <input type="url" id="portfolio" name="portfolio" pattern="https?://.+" title="Include http:// or https://">
+        <input type="url" id="portfolio" name="portfolio">
 
-        <input type="submit" value="Submit">
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
     </form>
 </body>
 </html>
